@@ -32,7 +32,7 @@ public class AccountService
 
     public Optional<Account> getAccountById(Long accountId)
     {
-        return Optional.ofNullable(accountRepository.findOne(accountId));
+        return accountRepository.findById(accountId);
     }
 
     public void lock(Long accountId, Long orderId)
