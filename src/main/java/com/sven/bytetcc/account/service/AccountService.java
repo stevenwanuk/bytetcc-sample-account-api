@@ -41,10 +41,12 @@ public class AccountService
         Account account = this.getAccountById(accountId)
                         .orElseThrow(() -> new AccountApiException("none of account is found"));
 
-        ProductOrder order = this.orderService.findOrderById(orderId)
-                        .orElseThrow(() -> new AccountApiException("none of order is found"));
-
-        double amoutNeedToPay = order.getAmount();
+//        ProductOrder order = this.orderService.findOrderById(orderId)
+//                        .orElseThrow(() -> new AccountApiException("none of order is found"));
+//
+//        double amoutNeedToPay = order.getAmount();
+        
+        double amoutNeedToPay = 100;
 
         if (account.getAvailableAmount() < amoutNeedToPay)
         {
